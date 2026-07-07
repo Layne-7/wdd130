@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>placeholder</title>
+    <title>HTML basic structure</title>
+    <meta name="description" content="A Basic HTML structure using semantic HTML elements">
+    <meta name="Author" content="Derek Layne">
 </head>
-<body>
-    
+
+<body> <!--body is all the content that is going to be displayed on the page-->
+    <header>
+        <img src="images/basic-logo.png" alt="HTML semantic tags image" widht="128" height="128">
+    </header>
+    <nav> <!--Nav means navigation links, so whenever you wanna add links, open up nav tags-->
+        <ul> <!--This menas unordered list-->
+            <li><a href="https://monkeytype.com/">Typing website</a></li>
+            <!--<li> means list items-->
+            <li><a href="https://www.youtube.com/">Youtube page</a></li>
+        </ul>
+    </nav>
+
+    <main> <!--This is the main content that will be shown-->
+        <h1>Basic HTML Structure</h1> <!--First layer of heading, the bigger one-->
+        <section> <!--Divinding into sections-->
+            <h2>Heading (section 1)</h2> <!--second layer of heading-->
+            <!--If you type lorem10 and tab, it will automatically fill this field up with ten words-->
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, animi?</p>
+        </section>
+
+        <section>
+            <h2>Heading (section 2)</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, facilis!</p>
+        </section>
+    </main>
+
+    <aside>
+        <!--<aside> is an HTML element used for content that is related to, but seperate from the main content of a page-->
+        <img
+          src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cordoba-argentina/800x500/cordoba-argentina-temples-buildings-1436937-wallpaper.jpg"
+          width="200"> <!--Image addres (link)-->
+    </aside>
+
+    <footer>
+        <p>Derek Layne</p>
+    </footer>
 </body>
+
 </html>
