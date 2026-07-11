@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*header is the "rule selector" and inside the rule are the declarations*/
+header,
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    /*This means that we want 10px for the top and bottom and 0 for right and left*/
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 30px gray;
+    /*first "0" is Horizontal displacement, second "0" is Vertical displacement and 30px is the blur*/
+}
+
+section {
+    /*This means 20px top and bottom and 0 for left and right*/
+    margin: 20px 0;
+    /*Border: 1px shows how thick the border line will be. "Solid" means how the line will look like. 10% is the opacity */
+    border: 1px solid rgb(0 0 0 / 15%);
+    /*padding means the whole text inside the section has a layer or box around it as well. Thats the box model.*/
+    padding: 15px;
+
+    background-color: #ddd;
+
+    font-size: .9rem;
+}
+
+section p {
+    margin: 10px;
+}
+
+ul {
+    /*top is 10px, left and right is 20px and the bottom is 0*/
+    margin: 10px 20px 0;
+    padding: 5px;
+}
+
+footer {
+    font-size: .9rem;
+}
