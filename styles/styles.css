@@ -1,3 +1,10 @@
+/*Universal selector*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*These are CSS variables*/
 :root {
     --heading-background-color: darkblue;
@@ -29,7 +36,8 @@ nav a {
 
 main {
 
-    max-width: auto;
+    max-width: 640px;
+    /*this sets the width within the content can be shown*/
 }
 
 /*This CSS rule references the <img > (image) in <main> as the selector and applies the following declarations:
@@ -47,19 +55,22 @@ main img {
     /*border has been set to 1px and its color to black*/
     padding: 1px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
     /*the shadow around the image is set to 30px and its color is set to gray*/
 }
 
 /*Now we're working on the image inside the <aside> element*/
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 15%);
-    /*border creates a line outlining the border and 15% means the opacity*/
-    padding: 15px;
-    background-color: beige;
-    color: #333;
     text-align: center;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 0;
+    left: 123px;
 }
 
 /**/
@@ -75,6 +86,7 @@ aside img {
 h1 {
     /*we setting our selector to be h1 (heading), and its color will be set to darkblue*/
     color: darkblue;
+    padding: 10px;
 }
 
 /*This CSS rule selects all the <p > (paragraph) elements as the selector and applies the following declaration:
@@ -83,7 +95,7 @@ h1 {
 
 p {
     /*now our selector is the paragraph*/
-    padding: 0;
+    padding: 10px;
 }
 
 /**/
@@ -91,4 +103,14 @@ footer {
     margin-top: 20px;
     border-top: 1px solid rgb(0 0 0 / 15%);
     text-align: center;
+}
+
+/*Class Selectors*/
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 /15%);
+    padding: 1.5rem;
+    background-color: beige;
+    color: #333;
 }
