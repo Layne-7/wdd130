@@ -1,8 +1,16 @@
+/*These are CSS variables*/
+:root {
+    --heading-background-color: darkblue;
+    --heading-text-color: white;
+    --borders: black;
+
+}
+
 /*This CSS rule names the <nav > element as the selected element to apply two style declarations. 
 1 - The background color will be the color "darkblue", which is a valid, named color. 
 2 - Padding, or area between the content and border is set to 10 pixels for readability. */
 nav {
-    background-color: darkblue;
+    background-color: var(--heading-background-color);
     /*this means that our background color will be set to darkblue*/
     padding: 10px;
 }
@@ -14,17 +22,15 @@ nav {
 */
 nav a {
     /*this means that our links will be white and divided by blocks and a padding of 20px*/
-    color: white;
+    color: var(--heading-text-color);
     display: block;
     padding: 20px;
 }
-
 
 main {
 
     max-width: auto;
 }
-
 
 /*This CSS rule references the <img > (image) in <main> as the selector and applies the following declarations:
  1 - a set width with a height that will adjust dynamically to fit the image's aspect ratio.
@@ -37,7 +43,7 @@ main img {
     /*our image is the element selected now*/
     width: 150px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--borders);
     /*border has been set to 1px and its color to black*/
     padding: 1px;
     box-shadow: 0 0 30px gray;
@@ -45,10 +51,11 @@ main img {
 }
 
 /*Now we're working on the image inside the <aside> element*/
-aside  {
+aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 15%); /*border creates a line outlining the border and 15% means the opacity*/
+    border: 1px solid rgb(0 0 0 / 15%);
+    /*border creates a line outlining the border and 15% means the opacity*/
     padding: 15px;
     background-color: beige;
     color: #333;
@@ -65,12 +72,10 @@ aside img {
 1 - The foreground, font color is set to darkblue.
 */
 
-
 h1 {
     /*we setting our selector to be h1 (heading), and its color will be set to darkblue*/
     color: darkblue;
 }
-
 
 /*This CSS rule selects all the <p > (paragraph) elements as the selector and applies the following declaration:
 1 - Padding between the paragraph content and the border is set to 10 pixels.
@@ -84,6 +89,6 @@ p {
 /**/
 footer {
     margin-top: 20px;
-    border-top: 1px solid rgb(0 0 0 / 25%);
+    border-top: 1px solid rgb(0 0 0 / 15%);
     text-align: center;
 }
