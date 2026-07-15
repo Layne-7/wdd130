@@ -81,7 +81,7 @@ h2 {
 
 .hero article {
     position: absolute;
-    bottom: 20px;
+    bottom: 1px;
     width: 90%;
     left: 20px;
     background-color: rgba(173, 216, 230, 0.8);
