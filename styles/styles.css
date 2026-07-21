@@ -19,7 +19,10 @@
 nav {
     background-color: var(--heading-background-color);
     /*this means that our background color will be set to darkblue*/
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 /* This CSS rule selects all the <a > (anchor / link) elements in the HTML that are children of the <nav > element and applies the following declarations:
@@ -28,16 +31,14 @@ nav {
 3 - Each anchor tag will have padding of 20px;
 */
 nav a {
-    /*this means that our links will be white and divided by blocks and a padding of 20px*/
-    color: var(--heading-text-color);
+    /*this means that our links will be white and divided by blocks*/
     display: block;
-    padding: 20px;
-}
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--heading-text-color);
 
-main {
-
-    max-width: 640px;
-    /*this sets the width within the content can be shown*/
 }
 
 /*This CSS rule references the <img > (image) in <main> as the selector and applies the following declarations:
@@ -87,6 +88,7 @@ h1 {
     /*we setting our selector to be h1 (heading), and its color will be set to darkblue*/
     color: darkblue;
     padding: 10px;
+    border-bottom: solid rgb(0 0 0 / 10%);
 }
 
 /*This CSS rule selects all the <p > (paragraph) elements as the selector and applies the following declaration:
@@ -96,6 +98,31 @@ h1 {
 p {
     /*now our selector is the paragraph*/
     padding: 10px;
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+}
+
+aside {
+    width: 20rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
 }
 
 /**/
