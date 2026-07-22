@@ -9,7 +9,7 @@
     --secondary-color: salmon;
     --third-color: black;
     --forth-color: white;
-    --heading-font: "Timens New Roman", "Georgia", serif;
+    --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -18,11 +18,49 @@ body {
     color: var(--third-color);
 }
 
-header,
-main,
-footer {
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/*  HEADER (grid)  */
+header {
     width: 840px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0d3b66;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+/*  NAV (flex)  */
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 8px 20px;
+    border: 1px solid var(--third-color);
+    background-color: var(--forth-color);
+    color: var(--third-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--forth-color);
 }
 
 h1,
@@ -31,9 +69,7 @@ h2 {
     color: var(--primary-color);
 }
 
-nav,
 p,
-section,
 article {
     margin: 16px;
     padding: 8px;
@@ -43,8 +79,17 @@ article {
     text-decoration: none;
 }
 
+/*  HERO (grid stack)  */
 .hero {
-    position: relative;
+    display: grid;
+    border: 1px solid var(--third-color);
+    margin: 20px auto;
+}
+
+.hero img,
+.hero h1,
+.hero article {
+    grid-area: 1 / 1;
 }
 
 .hero img {
@@ -54,23 +99,23 @@ article {
 }
 
 h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
+    align-self: start;
+    justify-self: stretch;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
     background-color: white;
     color: var(--secondary-color);
-
 }
 
-h2 {
-    background-color: darkslateblue;
-    color: var(--forth-color);
-    text-align: center;
-    padding: 15px;
-
+.hero article {
+    align-self: end;
+    justify-self: stretch;
+    width: 90%;
+    margin: 0 auto 16px auto;
+    background-color: rgba(173, 216, 230, 0.8);
+    padding: 20px;
+    border: 1px solid lightblue;
 }
 
 .hero article img {
@@ -79,16 +124,88 @@ h2 {
     margin-left: 15px;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 1px;
-    width: 90%;
-    left: 20px;
-    background-color: rgba(173, 216, 230, 0.8);
-    padding: 20px;
-    border: 1px solid lightblue;
+/* SECTION HEADINGS (plain, no full background)  */
+h2 {
+    color: var(--third-color);
+    text-align: center;
+    padding: 15px;
+    margin: 0 16px;
 }
 
+main > section {
+    border: 1px solid var(--third-color);
+    margin: 20px auto;
+    padding-bottom: 16px;
+}
+
+/* HISTORY (3-column grid)  */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ADVENTURE GALLERY (5-column grid)  */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border: 1px solid var(--third-color);
+    background-color: #eee;
+}
+
+.gallery figcaption {
+    margin-top: 4px;
+    font-size: 0.85rem;
+}
+
+/* FOOTER (flex)  */
 footer {
-    border-top: 1px solid rgba(0 0 0 / 25%);
+    width: 840px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0d3b66;
+    color: var(--forth-color);
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia a img {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    background-color: var(--forth-color);
+    border: 1px solid var(--forth-color);
+    border-radius: 4px;
 }
