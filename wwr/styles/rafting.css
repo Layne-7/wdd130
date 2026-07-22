@@ -81,7 +81,7 @@ article {
 
 /*  HERO (grid stack)  */
 .hero {
-    display: grid;
+    position: relative;
     border: 1px solid var(--third-color);
     margin: 20px auto;
 }
@@ -99,8 +99,10 @@ article {
 }
 
 h1 {
-    align-self: start;
-    justify-self: stretch;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
@@ -109,10 +111,10 @@ h1 {
 }
 
 .hero article {
-    align-self: end;
-    justify-self: stretch;
+    position: absolute;
+    bottom: 16px;
+    left: 5%;
     width: 90%;
-    margin: 0 auto 16px auto;
     background-color: rgba(173, 216, 230, 0.8);
     padding: 20px;
     border: 1px solid lightblue;
