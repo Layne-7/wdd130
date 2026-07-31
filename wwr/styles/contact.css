@@ -168,7 +168,7 @@ footer p {
     gap: 10px;
     align-items: start;
 
-    width: 420px;
+    width: 400px;
     margin: 20px auto;
 }
 
@@ -221,8 +221,4 @@ footer p {
 .contact-content iframe {
     width: 350px;
     height: 350px;
-}
-
-.contact-form {
-    width: 400px;
 }
